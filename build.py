@@ -252,26 +252,6 @@ def build_cocktail(cfg):
 </section>'''
 
 
-def build_looks(cfg):
-    s = cfg["sections"]["looks"]
-    items_html = ""
-    for item in s["items"]:
-        note = item["note"].replace("\n\n", "<br><br>").replace("\n", "<br>").replace("&", "&amp;")
-        label = item["label"].replace("&", "&amp;")
-        items_html += f'''
-    <div class="look-block">
-{img_frame(item['image'], 'aspect-ratio:2/3')}
-      <p class="look-label">{label}</p>
-      <p class="look-note">{note}</p>
-    </div>'''
-    return f'''<section class="board-section" id="looks">
-  {section_header("The <em>Looks</em>")}
-  {brief_p(s['brief'])}
-  <div class="looks-grid">{items_html}
-  </div>
-</section>'''
-
-
 def build_entryway(cfg):
     s    = cfg["sections"]["entryway"]
     imgs = s["images"]
@@ -290,13 +270,16 @@ def build_entryway(cfg):
 
 
 def build_reception(cfg):
-    s    = cfg["sections"]["reception"]
-    imgs = s["images"]
-    room_items = "".join(f"<li>— {r}</li>" for r in s["room_notes"])
-    sw   = s["sweetheart_note"].replace("&", "&amp;")
+    r    = cfg["sections"]["reception"]
+    t    = cfg["sections"]["tables"]
+    r_imgs = r["images"]
+    t_imgs = t["images"]
+    room_items = "".join(f"<li>— {i}</li>" for i in r["room_notes"])
+    sw   = r["sweetheart_note"].replace("&", "&amp;")
+    table_notes = "\n".join(note_box(n["label"], n["body"]) for n in t["notes"])
     return f'''<section class="board-section" id="reception">
   {section_header("The <em>Reception</em>")}
-  {brief_p(s['brief'])}
+  {brief_p(r['brief'])}
   <div class="g3" style="margin-bottom:16px;">
     <div class="note-box">
       <p class="note-label">The Room</p>
@@ -306,26 +289,17 @@ def build_reception(cfg):
       <p class="note-label">The Sweetheart Stage</p>
       <p class="note-body">{sw}</p>
     </div>
-{img_frame(imgs[0], "min-height:280px")}
+{img_frame(r_imgs[0], "min-height:280px")}
   </div>
-  <div style="margin-top:16px;">
-{img_frame(imgs[1], "aspect-ratio:16/9")}
+  <div style="margin-top:16px;margin-bottom:16px;">
+{img_frame(r_imgs[1], "aspect-ratio:16/9")}
   </div>
-</section>'''
-
-
-def build_tables(cfg):
-    s    = cfg["sections"]["tables"]
-    imgs = s["images"]
-    notes_html = "\n".join(note_box(n["label"], n["body"]) for n in s["notes"])
-    return f'''<section class="board-section" id="tables">
-  {section_header("The <em>Tables</em>")}
-  {brief_p(s['brief'])}
+  {brief_p(t['brief'])}
   <div style="margin-bottom:16px;">
-{img_frame(imgs[0], "aspect-ratio:4/3")}
+{img_frame(t_imgs[0], "aspect-ratio:4/3")}
   </div>
   <div class="g3">
-{notes_html}
+{table_notes}
   </div>
 </section>'''
 
@@ -386,10 +360,8 @@ def build(config):
         ("#arrival",  "Arrival"),
         ("#ceremony", "Ceremony"),
         ("#cocktail", "Cocktail Hour"),
-        ("#looks",    "The Looks"),
         ("#entryway", "Entryway"),
         ("#reception","Reception"),
-        ("#tables",   "Tables"),
         ("#cake",     "The Cake"),
     ]
     nav_html = "\n  ".join(f'<a href="{href}">{label}</a>' for href, label in nav_links)
@@ -449,19 +421,11 @@ def build(config):
 
 <hr class="divider">
 
-{build_looks(config)}
-
-<hr class="divider">
-
 {build_entryway(config)}
 
 <hr class="divider">
 
 {build_reception(config)}
-
-<hr class="divider">
-
-{build_tables(config)}
 
 <hr class="divider">
 
