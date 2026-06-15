@@ -292,11 +292,8 @@ def build_entryway(cfg):
 def build_reception(cfg):
     s    = cfg["sections"]["reception"]
     imgs = s["images"]
-    m    = cfg["meta"]
     room_items = "".join(f"<li>— {r}</li>" for r in s["room_notes"])
     sw   = s["sweetheart_note"].replace("&", "&amp;")
-    df   = s["dance_floor_text"]
-    lines_html = "<br>".join(df["lines"])
     return f'''<section class="board-section" id="reception">
   {section_header("The <em>Reception</em>")}
   {brief_p(s['brief'])}
@@ -311,14 +308,8 @@ def build_reception(cfg):
     </div>
 {img_frame(imgs[0], "min-height:280px")}
   </div>
-  <div class="g2">
+  <div style="margin-top:16px;">
 {img_frame(imgs[1], "aspect-ratio:16/9")}
-    <div style="display:flex;flex-direction:column;gap:16px;justify-content:center;padding:40px 36px;background:var(--navy);">
-      <p style="font-family:'Cormorant Garamond',serif;font-size:.68rem;letter-spacing:.35em;text-transform:uppercase;color:var(--champ);">{df['heading']}</p>
-      <div style="width:32px;height:1px;background:var(--gold);"></div>
-      <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.5vw,2rem);font-weight:300;color:var(--ivory);line-height:1.4;">{lines_html}</p>
-      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.95rem;color:rgba(248,244,238,.6);line-height:1.8;">{df['subline'].replace('&', '&amp;')}</p>
-    </div>
   </div>
 </section>'''
 
