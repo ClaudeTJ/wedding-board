@@ -477,7 +477,7 @@ def build(config):
 </html>"""
 
     os.makedirs("output", exist_ok=True)
-    with open("output/index.html", "w") as f:
+    with open("output/index.html", "w", encoding="utf-8") as f:
         f.write(html)
     size = os.path.getsize("output/index.html")
     print(f"✓ Board built: output/index.html ({size/1024/1024:.1f}MB)")
@@ -491,7 +491,7 @@ if __name__ == "__main__":
         print(f"❌ {config_path} not found. Run from the wedding-board/ directory.")
         sys.exit(1)
 
-    with open(config_path) as f:
+    with open(config_path, encoding="utf-8") as f:
         config = json.load(f)
 
     if "--validate" in sys.argv:
