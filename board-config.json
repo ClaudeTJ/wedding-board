@@ -1,0 +1,295 @@
+{
+  "meta": {
+    "title_groom": "Onesimus",
+    "title_bride": "Taonanyasha",
+    "date": "24 April 2026",
+    "location": "Zimbabwe",
+    "tagline": "becoming Mrs. K",
+    "subtitle": "refined romantic · classic elegance · becoming Mrs. K"
+  },
+
+  "palette": [
+    { "name": "Ivory",       "hex": "#F8F4EE" },
+    { "name": "Pearl White", "hex": "#FDFAF6", "border": true },
+    { "name": "Soft Blush",  "hex": "#EAC8BF" },
+    { "name": "Dusty Rose",  "hex": "#C8958A" },
+    { "name": "Champagne",   "hex": "#D4B896" },
+    { "name": "Antique Gold","hex": "#B8975A" },
+    { "name": "Dusty Blue",  "hex": "#8B9EB0" },
+    { "name": "Deep Navy",   "hex": "#1C2B3A" }
+  ],
+
+  "day_overview": {
+    "title": "The Day",
+    "brief": "One day. Three distinct worlds. Each designed to feel complete — together, they tell one story.",
+    "phases": [
+      {
+        "number": "I",
+        "title": "The Ceremony",
+        "setting": "Outdoors · Garden",
+        "description": "Crisp white & green florals · lush floral arch · semicircle seating for 200 · vows · first kiss under coloured smoke"
+      },
+      {
+        "number": "II",
+        "title": "Cocktail Hour",
+        "setting": "Outdoors · Garden Lawn",
+        "description": "Ivory lounge furniture · scalloped parasols · white outdoor bar · champagne & canapés · portrait corridor opens"
+      },
+      {
+        "number": "III",
+        "title": "The Reception",
+        "setting": "Indoors · Grand Hall",
+        "description": "Crystal chandeliers · blush & rose ceiling florals · monogram floor · sweetheart stage · dinner · first dance on clouds"
+      }
+    ]
+  },
+
+  "sections": {
+
+    "arrival": {
+      "title": "Arrival & Welcome",
+      "brief": "From the car park, guests are welcomed on both sides. One face reads WELCOME — the other tells the story of O & T, chapter by chapter, lit from above, florals at the base.",
+      "images": [
+        {
+          "key": "welcome_sign",
+          "file": "images/01-welcome-sign.jpeg",
+          "caption": "Welcome — one side",
+          "alt": "Welcome sign panels"
+        },
+        {
+          "key": "story_panels",
+          "file": "images/02-welcome-story.jpeg",
+          "caption": "The story of us — other side",
+          "alt": "Story panels"
+        }
+      ],
+      "design_brief": {
+        "heading": "The Design Brief",
+        "body": "Tall uplit ivory panels · serif caps + italic script typography · white hydrangea at the base\n\nWelcome side — individual letter panels, bold serif WELCOME with italic \"to our wedding\" beneath\n\nStory side — each panel is a chapter of O & T with a couple photograph and handwritten-style narrative text"
+      }
+    },
+
+    "ceremony": {
+      "title": "The Ceremony",
+      "brief": "Outdoors, under open sky. Crisp white and green — not a petal of blush in sight. The ceremony palette is classical and restrained so the reception reveal lands as a full colour transformation.",
+      "images": [
+        {
+          "key": "arch",
+          "file": "images/03-ceremony-arch.png",
+          "caption": "Arch, aisle & seating",
+          "alt": "Ceremony arch and aisle"
+        },
+        {
+          "key": "aisle",
+          "file": "images/04-ceremony-aisle.jpeg",
+          "caption": "The entrance walk",
+          "alt": "Aerial aisle walk"
+        },
+        {
+          "key": "seating",
+          "file": "images/05-ceremony-seating.png",
+          "caption": "Seating layout — semicircle option",
+          "alt": "Semicircle seating overhead"
+        }
+      ],
+      "notes": [
+        {
+          "label": "The Arch",
+          "body": "Lush white roses and hydrangea on a square canopy frame. White oval-back chairs either side."
+        },
+        {
+          "label": "The Aisle",
+          "body": "White floral runners flanking a marble runner. All-white blooms with green foliage."
+        },
+        {
+          "label": "Seating",
+          "body": "Semicircle layout wrapping guests around the moment — no one cranes, every seat is close."
+        }
+      ],
+      "first_kiss": {
+        "image": {
+          "key": "smoke",
+          "file": "images/06-ceremony-smoke.jpeg",
+          "caption": "The first kiss · coloured smoke",
+          "alt": "Coloured smoke first kiss"
+        },
+        "label": "The First Kiss",
+        "body": "At the first kiss, coloured smoke cannons release behind the arch — blush, champagne, dusty rose and ivory blooming into the sky. The photographs will be extraordinary."
+      }
+    },
+
+    "cocktail": {
+      "title": "Cocktail Hour",
+      "brief": "While the couple photographs, guests spill onto the garden lawn. Ivory lounge furniture clusters under scalloped parasols. A white outdoor bar is fully stocked. Champagne is poured. The portrait corridor begins to draw people in.",
+      "images": [
+        {
+          "key": "lounge",
+          "file": "images/07-cocktail-lounge.jpeg",
+          "caption": "The lounge · ivory furniture · scalloped parasols",
+          "alt": "Cocktail hour lounge"
+        },
+        {
+          "key": "bar",
+          "file": "images/08-cocktail-bar.jpeg",
+          "caption": "The bar · white outdoor station · champagne on arrival",
+          "alt": "Outdoor bar"
+        }
+      ],
+      "notes": [
+        {
+          "label": "Lounge",
+          "body": "Ivory curved sofas with ruffle trim · scalloped cream parasols · curved armchairs · side tables with white florals"
+        },
+        {
+          "label": "The Bar",
+          "body": "White painted wood bar with arched alcove shelving · champagne on arrival · signature cocktail · glassware display"
+        },
+        {
+          "label": "Canapés",
+          "body": "Roaming trays · passed canapés · one grazing station · add inspiration image TBD"
+        }
+      ]
+    },
+
+    "looks": {
+      "title": "The Looks",
+      "brief": "Two versions of the bride. Two versions of the groom. The same couple, transformed twice across a single day.",
+      "items": [
+        {
+          "image": {
+            "key": "attire",
+            "file": "images/09-looks-ceremony.jpeg",
+            "caption": "Ceremony",
+            "alt": "Ceremony attire"
+          },
+          "label": "Ceremony — Bride & Groom",
+          "note": "White fitted mermaid · modest long sleeves · high neckline · long train · half veil\n\nOney — white dinner jacket · black trousers · black bow tie"
+        },
+        {
+          "image": {
+            "key": "rdress",
+            "file": "images/10-looks-reception.jpeg",
+            "caption": "Reception — The Reveal",
+            "alt": "Reception dress in dusty rose"
+          },
+          "label": "Reception — The Reveal",
+          "note": "This silhouette · in dusty rose\nScultural off-shoulder neckline · full bead & shimmer · 3D floral petal appliqués blooming at the hem\n\nOney — black tuxedo jacket swap"
+        }
+      ]
+    },
+
+    "entryway": {
+      "title": "The Entryway",
+      "brief": "As guests move from cocktail hour into the reception, they walk through a portrait corridor where couple photographs alternate with table name panels — finding their table as they move through the story. At the corridor's end, a welcome board greets them into the room. Place cards at each table guide guests to their seat.",
+      "images": [
+        {
+          "key": "gallery",
+          "file": "images/11-entryway-corridor.jpeg",
+          "caption": "Portrait gallery corridor · alternating story & table panels",
+          "alt": "Portrait gallery corridor"
+        },
+        {
+          "key": "seatchart",
+          "file": "images/12-entryway-seating.png",
+          "caption": "Welcome board · end of the corridor",
+          "alt": "Welcome and seating board"
+        }
+      ],
+      "notes": [
+        {
+          "label": "The Corridor",
+          "body": "Large-format couple photographs alternating with table name panels along both walls. White hydrangea and baby's breath at the base of every frame. Uplighting from below. Guests arrive at the room already knowing where they belong."
+        },
+        {
+          "label": "Welcome & Place Cards",
+          "body": "At the corridor end: couple portrait and \"Welcome to the wedding of Onesimus & Taonanyasha.\" At each table, individual place cards guide guests to their seat."
+        }
+      ]
+    },
+
+    "reception": {
+      "title": "The Reception",
+      "brief": "The ceremony was white and green. The reception room is the payoff — blush, dusty rose and champagne blooms cascading from the ceiling, crystal chandeliers, and a monogram floor that bears your names in gold.",
+      "room_notes": [
+        "Crystal chandeliers cascading from above",
+        "Hanging floral ceiling in blush, dusty rose & champagne",
+        "Ivory draped walls and tent lining",
+        "Antique gold O & T monogram dance floor",
+        "White high-gloss reflective floor"
+      ],
+      "sweetheart_note": "Bridal party at a long banquet table for dinner. After the meal, O & T move to the sculptural couple's couch — raised platform, white arch backdrop, gold monogram centre, couple portraits either side. The dance floor opens in front of them.",
+      "images": [
+        {
+          "key": "couch",
+          "file": "images/13-reception-couch.jpeg",
+          "caption": "Sweetheart stage · O & T monogram · couple couch",
+          "alt": "Sweetheart couch backdrop"
+        },
+        {
+          "key": "monogram",
+          "file": "images/14-reception-monogram.jpeg",
+          "caption": "Monogram floor · O & T · 24 April 2026 · antique gold",
+          "alt": "Monogram dance floor"
+        }
+      ],
+      "dance_floor_text": {
+        "heading": "The Dance Floor",
+        "lines": ["Smoke rises from the floor.", "Cold sparks fountain either side.", "200 people watching."],
+        "subline": "O & T · antique gold monogram · 24 April 2026"
+      }
+    },
+
+    "tables": {
+      "title": "The Tables",
+      "brief": "200 guests — but the room should feel like a gathering, not a ballroom. Tables are clustered and connected, not lined in rows. Every seat has a sightline to the dance floor. Intimacy is a design choice.",
+      "images": [
+        {
+          "key": "tables",
+          "file": "images/15-tables-layout.jpeg",
+          "caption": "Intentional layout · clusters not rows · intimate at scale",
+          "alt": "Reception layout overview"
+        }
+      ],
+      "notes": [
+        {
+          "label": "Chairs",
+          "body": "Louis XVI oval-back · natural wood frame · ivory upholstery · nail-head trim"
+        },
+        {
+          "label": "Centrepieces",
+          "body": "Low, lush blush & dusty rose peony mounds · votive candles surrounding · gold flatware"
+        },
+        {
+          "label": "Layout",
+          "body": "Mix of round & long banquet tables · ivory linen · bridal party at long front table · place cards at every setting"
+        }
+      ]
+    },
+
+    "cake": {
+      "title": "The Cake",
+      "brief": "The centrepiece dessert on a dual revolving stand — slowly turning so every guest sees it. Ivory tiers, a cascade of 3D sugar flowers, and a gold O & T monogram at the crown.",
+      "images": [
+        {
+          "key": "cake",
+          "file": "images/16-cake-design.jpeg",
+          "caption": "The design — sugar flower cascade",
+          "alt": "Sugar flower wedding cake"
+        },
+        {
+          "key": "cakestand",
+          "file": "images/17-cake-stand.png",
+          "caption": "The presentation — dual revolving stand",
+          "alt": "Revolving cake stand"
+        }
+      ],
+      "brief_items": [
+        { "label": "Tiers",   "body": "5–6 tier display cake · separate cutting cake for service" },
+        { "label": "Finish",  "body": "Smooth ivory fondant · delicate lace embossing · pearl beading between tiers" },
+        { "label": "Florals", "body": "3D sugar flowers cascading — roses, peonies, orchids — all ivory & white" },
+        { "label": "Topper",  "body": "Antique gold O & T monogram script · crown position" },
+        { "label": "Display", "body": "Dual revolving stand · fluted column pedestal" }
+      ]
+    }
+  }
+}
