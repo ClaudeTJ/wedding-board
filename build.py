@@ -228,9 +228,16 @@ def build_ceremony(cfg):
     fk   = s["first_kiss"]
     notes_html = "\n".join(note_box(n["label"], n["body"]) for n in s["notes"])
     fk_body = fk["body"].replace("&", "&amp;")
+    ap   = s["approach"]
+    ap_body = ap["body"].replace("&", "&amp;")
     return f'''<section class="board-section" id="ceremony">
   {section_header(styled_title(s["title"]))}
   {brief_p(s['brief'])}
+  <div class="note-box" style="text-align:center;max-width:720px;margin:0 auto 32px;">
+    <p class="note-label">{ap['label']}</p>
+    <div class="gold-rule" style="margin:10px auto;"></div>
+    <p class="note-body">{ap_body}</p>
+  </div>
   <div class="g-asym" style="margin-bottom:16px;">
 {img_frame(imgs[0], "aspect-ratio:2/3")}
     <div style="display:flex;flex-direction:column;gap:16px;">
