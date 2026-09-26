@@ -17,19 +17,19 @@ wedding-board/
 │   ├── 02-welcome-story.jpeg
 │   ├── 03-ceremony-arch.jpeg
 │   ├── 04-ceremony-aisle.jpeg
-│   ├── 05-ceremony-seating.png
+│   ├── 05-ceremony-seating.jpeg
 │   ├── 06-ceremony-smoke.jpeg
 │   ├── 07-cocktail-lounge.jpeg
 │   ├── 08-cocktail-bar.jpeg
 │   ├── 09-looks-ceremony.jpeg
 │   ├── 10-looks-reception.jpeg
 │   ├── 11-entryway-corridor.jpeg
-│   ├── 12-entryway-seating.png
+│   ├── 12-entryway-seating.jpeg
 │   ├── 13-reception-couch.jpeg
 │   ├── 14-reception-monogram.jpeg
 │   ├── 15-tables-layout.jpeg
 │   ├── 16-cake-design.jpeg
-│   ├── 17-cake-stand.png
+│   ├── 17-cake-stand.jpeg
 │   └── 18-tables-setting.jpeg
 └── output/
     └── index.html         ← The generated board (open in browser)

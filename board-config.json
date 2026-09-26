@@ -93,7 +93,7 @@
         },
         {
           "key": "seating",
-          "file": "images/05-ceremony-seating.png",
+          "file": "images/05-ceremony-seating.jpeg",
           "caption": "Seating layout — semicircle option",
           "alt": "Semicircle seating overhead"
         }
@@ -196,7 +196,7 @@
         },
         {
           "key": "seatchart",
-          "file": "images/12-entryway-seating.png",
+          "file": "images/12-entryway-seating.jpeg",
           "caption": "Welcome board · end of the corridor",
           "alt": "Welcome and seating board"
         }
@@ -285,7 +285,7 @@
         },
         {
           "key": "cakestand",
-          "file": "images/17-cake-stand.png",
+          "file": "images/17-cake-stand.jpeg",
           "caption": "The presentation — dual revolving stand",
           "alt": "Revolving cake stand"
         }
