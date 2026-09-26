@@ -2,8 +2,8 @@
   "meta": {
     "title_groom": "Onesimus",
     "title_bride": "Taonanyasha",
-    "date": "24 April 2026",
-    "location": "Zimbabwe",
+    "date": "Wednesday 7th April 2027",
+    "location": "Siyekhya Estate",
     "tagline": "becoming Mrs. K",
     "subtitle": "refined romantic · classic elegance · becoming Mrs. K"
   },
@@ -25,19 +25,25 @@
     "phases": [
       {
         "number": "I",
+        "id": "env-ceremony",
         "title": "The Ceremony",
+        "sections": ["arrival", "ceremony"],
         "setting": "Outdoors · Garden",
         "description": "Crisp white & green florals · lush floral arch · semicircle seating for 200 · vows · first kiss under coloured smoke"
       },
       {
         "number": "II",
+        "id": "env-cocktail",
         "title": "Cocktail Hour",
+        "sections": ["cocktail"],
         "setting": "Outdoors · Garden Lawn",
         "description": "Ivory lounge furniture · scalloped parasols · white outdoor bar · champagne & canapés · portrait corridor opens"
       },
       {
         "number": "III",
+        "id": "env-reception",
         "title": "The Reception",
+        "sections": ["entryway", "reception", "cake"],
         "setting": "Indoors · Grand Hall",
         "description": "Crystal chandeliers · blush & rose ceiling florals · monogram floor · sweetheart stage · dinner · first dance on clouds"
       }
@@ -70,7 +76,7 @@
     },
 
     "ceremony": {
-      "title": "The Ceremony",
+      "title": "The Setting",
       "brief": "Outdoors, under open sky. Crisp white and green — not a petal of blush in sight. The ceremony palette is classical and restrained so the reception reveal lands as a full colour transformation.",
       "images": [
         {
@@ -119,7 +125,7 @@
     },
 
     "cocktail": {
-      "title": "Cocktail Hour",
+      "title": "Lounge & Bar",
       "brief": "While the couple photographs, guests spill onto the garden lawn. Ivory lounge furniture clusters under scalloped parasols. A white outdoor bar is fully stocked. Champagne is poured. The portrait corridor begins to draw people in.",
       "images": [
         {
@@ -208,7 +214,7 @@
     },
 
     "reception": {
-      "title": "The Reception",
+      "title": "The Room",
       "brief": "The ceremony was white and green. The reception room is the payoff — blush, dusty rose and champagne blooms cascading from the ceiling, crystal chandeliers, and a monogram floor that bears your names in gold.",
       "room_notes": [
         "Crystal chandeliers cascading from above",
@@ -228,7 +234,7 @@
         {
           "key": "monogram",
           "file": "images/14-reception-monogram.jpeg",
-          "caption": "Monogram floor · O & T · 24 April 2026 · antique gold",
+          "caption": "Monogram floor · O & T · 7 April 2027 · antique gold",
           "alt": "Monogram dance floor"
         }
       ]

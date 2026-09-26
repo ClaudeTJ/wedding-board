@@ -1,5 +1,5 @@
 # Onesimus & Taonanyasha — Wedding Vision Board
-### 24 April 2026 · Zimbabwe
+### Wednesday 7th April 2027 · Siyekhya Estate
 
 A self-contained build system for the wedding vision board.
 Edit text in `board-config.json`, swap images in `images/`, run `build.py` to regenerate.
@@ -93,16 +93,20 @@ python3 build.py --validate
 
 ## Section map (board-config.json keys)
 
-| Key            | Section on board         | Images |
-|----------------|--------------------------|--------|
-| `arrival`      | Arrival & Welcome        | 01, 02 |
-| `ceremony`     | The Ceremony             | 03–06  |
-| `cocktail`     | Cocktail Hour            | 07, 08 |
-| `looks`        | The Looks                | 09, 10 |
-| `entryway`     | The Entryway             | 11, 12 |
-| `reception`    | The Reception            | 13, 14 |
-| `tables`       | The Tables               | 15     |
-| `cake`         | The Cake                 | 16, 17 |
+The board is split into three environments, driven by `day_overview.phases`.
+Each phase has an `id` (its anchor) and a `sections` list naming the board
+sections that live inside it — reorder or move a key to move a section.
+
+| Environment        | Key            | Section on board         | Images |
+|--------------------|----------------|--------------------------|--------|
+| I · Ceremony       | `arrival`      | Arrival & Welcome        | 01, 02 |
+|                    | `ceremony`     | The Setting              | 03–06  |
+| II · Cocktail Hour | `cocktail`     | Lounge & Bar             | 07, 08 |
+| III · Reception    | `entryway`     | The Entryway             | 11, 12 |
+|                    | `reception`    | The Room (+ `tables`)    | 13–15  |
+|                    | `cake`         | The Cake                 | 16, 17 |
+
+`looks` (09, 10) is kept in the config but not rendered.
 
 ---
 

@@ -64,6 +64,11 @@ def section_header(title):
     <div class="section-rule"></div>
   </div>'''
 
+def styled_title(title):
+    """Escape a title and italicise its last word, e.g. 'The <em>Room</em>'."""
+    words = title.replace("&", "&amp;").split()
+    return " ".join(words[:-1] + [f"<em>{words[-1]}</em>"])
+
 def brief_p(text):
     text_html = text.replace("&", "&amp;").replace('"', "&quot;")
     return f'  <p class="brief">{text_html}</p>'
@@ -125,20 +130,34 @@ CSS = """
   .signage-body{font-size:.82rem;line-height:1.8;color:var(--muted);font-weight:300;}
   .gold-rule{width:40px;height:1px;background:var(--gold);}
   .day-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(184,151,90,.2);max-width:1200px;margin:0 auto;}
-  .day-panel{padding:52px 40px;text-align:center;}
+  .day-panel{padding:52px 40px;text-align:center;color:inherit;text-decoration:none;transition:background-color .3s;}
+  .day-panel:hover{background-color:var(--pearl)!important;}
   .day-num{font-family:'Cormorant Garamond',serif;font-size:.68rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
   .day-title{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:300;letter-spacing:.04em;margin-bottom:16px;}
   .day-sub{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:14px;}
   .day-body{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.97rem;color:var(--muted);line-height:1.9;}
   .cake-note-item{font-size:.82rem;color:var(--muted);line-height:1.7;padding-left:16px;border-left:1px solid var(--gold);margin-bottom:12px;font-weight:300;}
   .cake-note-item strong{color:var(--text);font-weight:400;display:block;margin-bottom:2px;text-transform:uppercase;font-size:.68rem;letter-spacing:.15em;}
+  .env-banner{padding:120px 24px 100px;text-align:center;position:relative;border-top:1px solid rgba(184,151,90,.25);border-bottom:1px solid rgba(184,151,90,.25);scroll-margin-top:52px;}
+  .env-ceremony{background:linear-gradient(180deg,var(--pearl),#F3F5EF);}
+  .env-cocktail{background:linear-gradient(180deg,var(--pearl),rgba(212,184,150,.28));}
+  .env-reception{background:linear-gradient(180deg,var(--pearl),rgba(234,200,191,.42));}
+  .env-num{font-family:'Cormorant Garamond',serif;font-size:.75rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;}
+  .env-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,7vw,5rem);font-weight:300;line-height:1.05;letter-spacing:.02em;}
+  .env-title em{font-style:italic;color:var(--rose);}
+  .env-setting{margin-top:22px;font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:400;}
+  .env-desc{margin:18px auto 0;max-width:620px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;line-height:1.8;color:var(--muted);}
+  .env-contents{margin-top:32px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;}
+  .env-contents a{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding-bottom:3px;border-bottom:1px solid rgba(184,151,90,.35);transition:color .2s;}
+  .env-contents a:hover{color:var(--gold);}
   footer{padding:60px 24px;text-align:center;background:var(--pearl);border-top:1px solid rgba(184,151,90,.15);}
   .footer-monogram{font-family:'Cormorant Garamond',serif;font-size:2rem;font-style:italic;color:var(--gold);letter-spacing:.1em;}
   .footer-date{margin-top:8px;font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);}
   @media(max-width:768px){
     .board-section{padding:60px 20px;}
     .g2,.g3,.looks-grid,.g-asym,.g-asym-r,.day-grid{grid-template-columns:1fr;}
-    nav{gap:16px;}
+    nav{gap:16px;justify-content:flex-start;}
+    .env-banner{padding:80px 20px 64px;}
   }
 """
 
@@ -168,13 +187,13 @@ def build_day_overview(cfg):
     bg_colors = [f"background:var(--ivory)", f"background:var(--pearl);border-left:1px solid rgba(184,151,90,.2);border-right:1px solid rgba(184,151,90,.2)", f"background:var(--ivory)"]
     for i, phase in enumerate(d["phases"]):
         panels_html += f'''
-    <div class="day-panel" style="{bg_colors[i]}">
+    <a class="day-panel" href="#{phase['id']}" style="{bg_colors[i]}">
       <p class="day-num">{phase['number']}</p>
       <h3 class="day-title">{phase['title']}</h3>
       <div style="width:32px;height:1px;background:var(--gold);margin:0 auto 20px;"></div>
       <p class="day-sub">{phase['setting']}</p>
       <p class="day-body">{phase['description']}</p>
-    </div>'''
+    </a>'''
     return f'''<section class="board-section" id="overview">
   {section_header("The <em>" + d['title'].split()[-1] + "</em>")}
   <p class="brief">{d['brief']}</p>
@@ -189,7 +208,7 @@ def build_arrival(cfg):
     db   = s["design_brief"]
     body = db["body"].replace("\n\n", "<br><br>").replace("\n", "<br>").replace("&", "&amp;").replace('"', "&quot;")
     return f'''<section class="board-section" id="arrival">
-  {section_header("Arrival &amp; <em>Welcome</em>")}
+  {section_header(styled_title(s["title"]))}
   {brief_p(s['brief'])}
   <div class="g2" style="margin-bottom:16px;">
 {img_frame(imgs[0], "aspect-ratio:4/3")}
@@ -210,7 +229,7 @@ def build_ceremony(cfg):
     notes_html = "\n".join(note_box(n["label"], n["body"]) for n in s["notes"])
     fk_body = fk["body"].replace("&", "&amp;")
     return f'''<section class="board-section" id="ceremony">
-  {section_header("The <em>Ceremony</em>")}
+  {section_header(styled_title(s["title"]))}
   {brief_p(s['brief'])}
   <div class="g-asym" style="margin-bottom:16px;">
 {img_frame(imgs[0], "aspect-ratio:2/3")}
@@ -240,7 +259,7 @@ def build_cocktail(cfg):
     imgs = s["images"]
     notes_html = "\n".join(note_box(n["label"], n["body"]) for n in s["notes"])
     return f'''<section class="board-section" id="cocktail">
-  {section_header("Cocktail <em>Hour</em>")}
+  {section_header(styled_title(s["title"]))}
   {brief_p(s['brief'])}
   <div class="g2" style="margin-bottom:16px;">
 {img_frame(imgs[0], "aspect-ratio:4/3")}
@@ -257,7 +276,7 @@ def build_entryway(cfg):
     imgs = s["images"]
     notes_html = "\n".join(note_box(n["label"], n["body"]) for n in s["notes"])
     return f'''<section class="board-section" id="entryway">
-  {section_header("The <em>Entryway</em>")}
+  {section_header(styled_title(s["title"]))}
   {brief_p(s['brief'])}
   <div class="g2" style="margin-bottom:16px;">
 {img_frame(imgs[0], "aspect-ratio:4/3")}
@@ -278,7 +297,7 @@ def build_reception(cfg):
     sw   = r["sweetheart_note"].replace("&", "&amp;")
     table_notes = "\n".join(note_box(n["label"], n["body"]) for n in t["notes"])
     return f'''<section class="board-section" id="reception">
-  {section_header("The <em>Reception</em>")}
+  {section_header(styled_title(r["title"]))}
   {brief_p(r['brief'])}
   <div class="g3" style="margin-bottom:16px;">
     <div class="note-box">
@@ -311,7 +330,7 @@ def build_cake(cfg):
     for item in s["brief_items"]:
         items_html += f'''        <div class="cake-note-item"><strong>{item['label']}</strong>{item['body']}</div>\n'''
     return f'''<section class="board-section" id="cake">
-  {section_header("The <em>Cake</em>")}
+  {section_header(styled_title(s["title"]))}
   {brief_p(s['brief'])}
   <div class="g2">
 {img_frame(imgs[0], "aspect-ratio:2/3")}
@@ -323,6 +342,39 @@ def build_cake(cfg):
     </div>
   </div>
 </section>'''
+
+
+SECTION_BUILDERS = {
+    "arrival":   build_arrival,
+    "ceremony":  build_ceremony,
+    "cocktail":  build_cocktail,
+    "entryway":  build_entryway,
+    "reception": build_reception,
+    "cake":      build_cake,
+}
+
+
+def build_environment(cfg, phase):
+    """An environment banner followed by the board sections that belong to it."""
+    contents = "\n    ".join(
+        f'<a href="#{key}">{cfg["sections"][key]["title"].replace("&", "&amp;")}</a>'
+        for key in phase["sections"]
+    )
+    sections = "\n\n<hr class=\"divider\">\n\n".join(
+        SECTION_BUILDERS[key](cfg) for key in phase["sections"]
+    )
+    env_class = phase["id"]
+    return f'''<section class="env-banner {env_class}" id="{phase['id']}">
+  <p class="env-num">Environment {phase['number']}</p>
+  <h2 class="env-title">{styled_title(phase['title'])}</h2>
+  <p class="env-setting">{phase['setting']}</p>
+  <p class="env-desc">{phase['description']}</p>
+  <div class="env-contents">
+    {contents}
+  </div>
+</section>
+
+{sections}'''
 
 
 # ── Main build ──────────────────────────────────────────────────────────────
@@ -354,16 +406,11 @@ def validate(config):
 def build(config):
     m = config["meta"]
 
+    phases = config["day_overview"]["phases"]
     nav_links = [
         ("#palette",  "Palette"),
         ("#overview", "Day Overview"),
-        ("#arrival",  "Arrival"),
-        ("#ceremony", "Ceremony"),
-        ("#cocktail", "Cocktail Hour"),
-        ("#entryway", "Entryway"),
-        ("#reception","Reception"),
-        ("#cake",     "The Cake"),
-    ]
+    ] + [(f"#{p['id']}", p["title"]) for p in phases]
     nav_html = "\n  ".join(f'<a href="{href}">{label}</a>' for href, label in nav_links)
 
     palette_swatches = "".join(
@@ -373,6 +420,8 @@ def build(config):
       <span class="swatch-name">{s['name']}</span>
     </div>''' for s in config["palette"]
     )
+
+    environments_html = "\n\n".join(build_environment(config, p) for p in phases)
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -407,29 +456,7 @@ def build(config):
 
 {build_day_overview(config)}
 
-<hr class="divider">
-
-{build_arrival(config)}
-
-<hr class="divider">
-
-{build_ceremony(config)}
-
-<hr class="divider">
-
-{build_cocktail(config)}
-
-<hr class="divider">
-
-{build_entryway(config)}
-
-<hr class="divider">
-
-{build_reception(config)}
-
-<hr class="divider">
-
-{build_cake(config)}
+{environments_html}
 
 <footer>
   <p class="footer-monogram">O &amp; T · K</p>
