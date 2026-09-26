@@ -15,7 +15,7 @@ wedding-board/
 ├── images/                ← All 18 board images (named by section)
 │   ├── 01-welcome-sign.jpeg
 │   ├── 02-welcome-story.jpeg
-│   ├── 03-ceremony-arch.png
+│   ├── 03-ceremony-arch.jpeg
 │   ├── 04-ceremony-aisle.jpeg
 │   ├── 05-ceremony-seating.png
 │   ├── 06-ceremony-smoke.jpeg

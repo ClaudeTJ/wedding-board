@@ -29,7 +29,7 @@
         "title": "The Ceremony",
         "sections": ["arrival", "ceremony"],
         "setting": "Outdoors · Garden",
-        "description": "Crisp white & green florals · lush floral arch · semicircle seating for 200 · vows · first kiss under coloured smoke"
+        "description": "White florals in green, ivory & champagne · sculpted floral arch · semicircle seating for 200 · vows · first kiss under coloured smoke"
       },
       {
         "number": "II",
@@ -77,12 +77,12 @@
 
     "ceremony": {
       "title": "The Setting",
-      "brief": "Outdoors, under open sky. Crisp white and green — not a petal of blush in sight. The ceremony palette is classical and restrained so the reception reveal lands as a full colour transformation.",
+      "brief": "Outdoors, under open sky. White florals in green, ivory and champagne — not a petal of blush in sight. The ceremony palette is classical and restrained so the reception reveal lands as a full colour transformation.",
       "images": [
         {
           "key": "arch",
-          "file": "images/03-ceremony-arch.png",
-          "caption": "Arch, aisle & seating",
+          "file": "images/03-ceremony-arch.jpeg",
+          "caption": "The arch & aisle · white florals · green, ivory & champagne",
           "alt": "Ceremony arch and aisle"
         },
         {
@@ -101,7 +101,7 @@
       "notes": [
         {
           "label": "The Arch",
-          "body": "Lush white roses and hydrangea on a square canopy frame. White oval-back chairs either side."
+          "body": "Sculpted ivory arch dressed with an asymmetric cascade of white florals — a mix of silk and fresh blooms — with green foliage, ivory and champagne tones and soft baby's breath. Ivory urns of white florals flank the entrance."
         },
         {
           "label": "The Aisle",
@@ -215,7 +215,7 @@
 
     "reception": {
       "title": "The Room",
-      "brief": "The ceremony was white and green. The reception room is the payoff — blush, dusty rose and champagne blooms cascading from the ceiling, crystal chandeliers, and a monogram floor that bears your names in gold.",
+      "brief": "The ceremony was white, green, ivory and champagne. The reception room is the payoff — blush, dusty rose and champagne blooms cascading from the ceiling, crystal chandeliers, and a monogram floor that bears your names in gold.",
       "room_notes": [
         "Crystal chandeliers cascading from above",
         "Hanging floral ceiling in blush, dusty rose & champagne",
