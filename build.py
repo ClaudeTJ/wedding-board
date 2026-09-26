@@ -261,9 +261,8 @@ def build_cocktail(cfg):
     return f'''<section class="board-section" id="cocktail">
   {section_header(styled_title(s["title"]))}
   {brief_p(s['brief'])}
-  <div class="g2" style="margin-bottom:16px;">
-{img_frame(imgs[0], "aspect-ratio:4/3")}
-{img_frame(imgs[1], "aspect-ratio:4/3")}
+  <div class="g3" style="margin-bottom:16px;">
+{"".join(img_frame(img, "aspect-ratio:3/4") for img in imgs)}
   </div>
   <div class="g3">
 {notes_html}

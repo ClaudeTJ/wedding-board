@@ -12,14 +12,15 @@ Edit text in `board-config.json`, swap images in `images/`, run `build.py` to re
 wedding-board/
 ├── board-config.json      ← ALL text content lives here
 ├── build.py               ← Generates output/index.html
-├── images/                ← All 18 board images (named by section)
+├── images/                ← All 19 board images (named by section)
 │   ├── 01-welcome-sign.jpeg
 │   ├── 02-welcome-story.jpeg
 │   ├── 03-ceremony-arch.jpeg
 │   ├── 04-ceremony-aisle.jpeg
 │   ├── 05-ceremony-seating.jpeg
 │   ├── 06-ceremony-smoke.jpeg
-│   ├── 07-cocktail-lounge.jpeg
+│   ├── 07-cocktail-cabana.jpeg
+│   ├── 07-cocktail-terrace.jpeg
 │   ├── 08-cocktail-bar.jpeg
 │   ├── 09-looks-ceremony.jpeg
 │   ├── 10-looks-reception.jpeg

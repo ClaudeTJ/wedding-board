@@ -37,7 +37,7 @@
         "title": "Cocktail Hour",
         "sections": ["cocktail"],
         "setting": "Outdoors · Garden Lawn",
-        "description": "Ivory lounge furniture · scalloped parasols · white outdoor bar · champagne & canapés · portrait corridor opens"
+        "description": "Ivory lounge furniture · draped cabanas · white outdoor bar · champagne & canapés · portrait corridor opens"
       },
       {
         "number": "III",
@@ -126,13 +126,19 @@
 
     "cocktail": {
       "title": "Lounge & Bar",
-      "brief": "While the couple photographs, guests spill onto the garden lawn. Ivory lounge furniture clusters under scalloped parasols. A white outdoor bar is fully stocked. Champagne is poured. The portrait corridor begins to draw people in.",
+      "brief": "While the couple photographs, guests spill onto the garden lawn. Ivory lounge furniture clusters under draped cabanas and along the glass-roofed terrace. A white outdoor bar is fully stocked. Champagne is poured. The portrait corridor begins to draw people in.",
       "images": [
         {
-          "key": "lounge",
-          "file": "images/07-cocktail-lounge.jpeg",
-          "caption": "The lounge · ivory furniture · scalloped parasols",
-          "alt": "Cocktail hour lounge"
+          "key": "cabana",
+          "file": "images/07-cocktail-cabana.jpeg",
+          "caption": "The lawn · draped ivory cabana lounge",
+          "alt": "Ivory draped cabana with lounge seating on the lawn"
+        },
+        {
+          "key": "terrace",
+          "file": "images/07-cocktail-terrace.jpeg",
+          "caption": "The terrace · ivory lounge under glass",
+          "alt": "Ivory lounge seating on a glass-roofed garden terrace"
         },
         {
           "key": "bar",
@@ -144,7 +150,7 @@
       "notes": [
         {
           "label": "Lounge",
-          "body": "Ivory curved sofas with ruffle trim · scalloped cream parasols · curved armchairs · side tables with white florals"
+          "body": "Ivory sofas & armchairs with striped cushions · draped ivory cabanas on the lawn · round white side tables with bud vases of white florals · textured ivory rugs · high cocktail tables around the edges"
         },
         {
           "label": "The Bar",
