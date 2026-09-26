@@ -12,7 +12,7 @@ Edit text in `board-config.json`, swap images in `images/`, run `build.py` to re
 wedding-board/
 ├── board-config.json      ← ALL text content lives here
 ├── build.py               ← Generates output/index.html
-├── images/                ← All 19 board images (named by section)
+├── images/                ← All 20 board images (named by section)
 │   ├── 01-welcome-sign.jpeg
 │   ├── 02-welcome-story.jpeg
 │   ├── 03-ceremony-arch.jpeg
@@ -31,7 +31,8 @@ wedding-board/
 │   ├── 15-tables-layout.jpeg
 │   ├── 16-cake-design.jpeg
 │   ├── 17-cake-stand.jpeg
-│   └── 18-tables-setting.jpeg
+│   ├── 18-tables-setting.jpeg
+│   └── 19-tables-runner.jpeg
 └── output/
     └── index.html         ← The generated board (open in browser)
 ```
@@ -105,7 +106,7 @@ sections that live inside it — reorder or move a key to move a section.
 |                    | `ceremony`     | The Setting              | 03–06  |
 | II · Cocktail Hour | `cocktail`     | Lounge & Bar             | 07, 08 |
 | III · Reception    | `entryway`     | The Entryway             | 11, 12 |
-|                    | `reception`    | The Room (+ `tables`)    | 13–15, 18 |
+|                    | `reception`    | The Room (+ `tables`)    | 13–15, 18, 19 |
 |                    | `cake`         | The Cake                 | 16, 17 |
 
 `looks` (09, 10) is kept in the config but not rendered.

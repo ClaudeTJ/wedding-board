@@ -330,7 +330,7 @@ def build_reception(cfg):
 {img_frame(r_imgs[1], "aspect-ratio:16/9")}
   </div>
   {brief_p(t['brief'])}
-  <div class="g2" style="margin-bottom:16px;">
+  <div class="g3" style="margin-bottom:16px;align-items:start;">
 {"".join(img_with_note(img, "aspect-ratio:3/4") for img in t_imgs)}
   </div>
   <div class="g3">

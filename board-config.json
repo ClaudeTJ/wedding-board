@@ -261,14 +261,20 @@
           "alt": "Reception layout overview",
           "note": {
             "label": "Layout, not decor",
-            "body": "Take the layout from this picture — flex the table styles across the room with a mix of rounds, long banquets and curved serpentine runs, clustered rather than in rows. The level of decor is the one shown in the table setting picture alongside: ivory linen, tall florals and taper candles."
+            "body": "Take the layout from this picture — flex the table styles across the room with a mix of rounds, long banquets and curved serpentine runs, clustered rather than in rows. The level of decor is the one shown in the two table pictures alongside: ivory linen, gold-rimmed tableware, abundant roses and candlelight in clear glass."
           }
         },
         {
           "key": "table_setting",
           "file": "images/18-tables-setting.jpeg",
-          "caption": "The table setting · tall florals · taper candles",
+          "caption": "Round tables · one centrepiece each",
           "alt": "Reception tables with tall floral centrepieces"
+        },
+        {
+          "key": "table_runner",
+          "file": "images/19-tables-runner.jpeg",
+          "caption": "Long tables · roses run the full length",
+          "alt": "Long banquet table with a rose runner and glass candle holders"
         }
       ],
       "notes": [
@@ -278,7 +284,7 @@
         },
         {
           "label": "Centrepieces",
-          "body": "Low, lush blush & dusty rose peony mounds · votive candles surrounding · gold flatware"
+          "body": "Round tables — one statement centrepiece each · Long tables — roses laid as a runner down the full length, woven through clear glass candle holders · Florals in dusty rose, ivory, champagne & green · gold flatware"
         },
         {
           "label": "Layout",
