@@ -257,8 +257,12 @@
         {
           "key": "tables",
           "file": "images/15-tables-layout.jpeg",
-          "caption": "Intentional layout · clusters not rows · intimate at scale",
-          "alt": "Reception layout overview"
+          "caption": "Layout inspiration · flex the table styles",
+          "alt": "Reception layout overview",
+          "note": {
+            "label": "Layout, not decor",
+            "body": "Take the layout from this picture — flex the table styles across the room with a mix of rounds, long banquets and curved serpentine runs, clustered rather than in rows. The level of decor is the one shown in the table setting picture alongside: ivory linen, tall florals and taper candles."
+          }
         },
         {
           "key": "table_setting",

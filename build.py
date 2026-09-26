@@ -47,6 +47,16 @@ def img_frame(img_cfg, frame_style="", img_style="", caption=True):
       <img src="{src}" alt="{alt}" loading="lazy"{img_s}>{cap_html}
     </div>'''
 
+def img_with_note(img_cfg, frame_style=""):
+    """Image frame with an optional note box directly beneath it."""
+    note = img_cfg.get("note")
+    if not note:
+        return img_frame(img_cfg, frame_style)
+    return f'''    <div style="display:flex;flex-direction:column;gap:16px;">
+{img_frame(img_cfg, frame_style)}
+{note_box(note["label"], note["body"])}
+    </div>'''
+
 def note_box(label, body):
     """Generate a note box with label and body."""
     body_html = body.replace("&", "&amp;").replace('"', "&quot;")
@@ -321,7 +331,7 @@ def build_reception(cfg):
   </div>
   {brief_p(t['brief'])}
   <div class="g2" style="margin-bottom:16px;">
-{"".join(img_frame(img, "aspect-ratio:3/4") for img in t_imgs)}
+{"".join(img_with_note(img, "aspect-ratio:3/4") for img in t_imgs)}
   </div>
   <div class="g3">
 {table_notes}
