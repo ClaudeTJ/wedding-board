@@ -90,7 +90,7 @@ CSS = """
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{
     --ivory:#F8F4EE;--pearl:#FDFAF6;--blush:#EAC8BF;--rose:#C8958A;
-    --champ:#D4B896;--gold:#B8975A;--dblue:#8B9EB0;--navy:#1C2B3A;
+    --champ:#D4B896;--gold:#B8975A;--dblue:#8B9EB0;
     --text:#2A1F1A;--muted:#7A6A60;
   }
   html{scroll-behavior:smooth;}

@@ -15,8 +15,7 @@
     { "name": "Dusty Rose",  "hex": "#C8958A" },
     { "name": "Champagne",   "hex": "#D4B896" },
     { "name": "Antique Gold","hex": "#B8975A" },
-    { "name": "Dusty Blue",  "hex": "#8B9EB0" },
-    { "name": "Deep Navy",   "hex": "#1C2B3A" }
+    { "name": "Dusty Blue",  "hex": "#8B9EB0" }
   ],
 
   "day_overview": {
